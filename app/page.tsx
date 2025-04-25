@@ -91,7 +91,7 @@ export default function Home() {
               <motion.img
                 src="/logo.png"
                 alt="Aurum Domains Logo"
-                className="mx-auto mb-8 w-32 md:w-40"
+                className="mx-auto mb-8 w-48 md:w-192"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
