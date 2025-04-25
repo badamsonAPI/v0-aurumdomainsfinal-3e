@@ -128,10 +128,6 @@ export default function Home() {
               transition={{ duration: 1.2, delay: 1 }}
             ></motion.div>
 
-            <Button className="bg-transparent hover:bg-gold-900/20 text-[#D9C379] border border-gold-800 hover:border-gold-400 px-10 py-6 font-cormorant tracking-widest text-lg transition-all duration-500">
-                VIEW COLLECTION
-              </Button>
-
             <div className="mb-0.8">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="how-it-works" className="border-gold-900/30">
