@@ -131,7 +131,6 @@ export default function Home() {
             <Button className="bg-transparent hover:bg-gold-900/20 text-[#D9C379] border border-gold-800 hover:border-gold-400 px-10 py-6 font-cormorant tracking-widest text-lg transition-all duration-500">
                 VIEW COLLECTION
               </Button>
-            </motion.div>
 
             <div className="mb-0.8">
               <Accordion type="single" collapsible className="w-full">
