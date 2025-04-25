@@ -47,7 +47,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <h1 className="text-4xl md:text-6xl text-[#D4AF37] font-serif">
+            <h1 className="text-4xl md:text-6xl text-[#E6D9B4] font-serif">
               Welcome to Aurum Domains
             </h1>
           </motion.div>
@@ -59,7 +59,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
             <header className="mb-32 text-center">
               <motion.h1
-                className="text-[#D4AF37] text-4xl md:text-5xl lg:text-6xl font-playfair mb-6 tracking-wide"
+                className="text-[#E6D9B4] text-4xl md:text-5xl lg:text-6xl font-playfair mb-6 tracking-wide"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,7 +90,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Button className="bg-transparent hover:bg-gold-900/20 text-[#D4AF37] border border-gold-800 hover:border-gold-400 px-10 py-6 font-cormorant tracking-widest text-lg transition-all duration-500">
+              <Button className="bg-transparent hover:bg-gold-900/20 text-[#E6D9B4] border border-gold-800 hover:border-gold-400 px-10 py-6 font-cormorant tracking-widest text-lg transition-all duration-500">
                 VIEW COLLECTION
               </Button>
             </motion.div>
@@ -105,7 +105,7 @@ export default function Home() {
             <div className="mb-20">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="how-it-works" className="border-gold-900/30">
-                  <AccordionTrigger className="text-[#D4AF37] font-cormorant text-xl tracking-wider py-6 hover:text-gold-300 transition-colors">
+                  <AccordionTrigger className="text-[#E6D9B4] font-cormorant text-xl tracking-wider py-6 hover:text-gold-300 transition-colors">
                     How It Works
                   </AccordionTrigger>
                   <AccordionContent className="text-[#E7D7B7] font-cormorant text-lg leading-relaxed">
@@ -124,7 +124,7 @@ export default function Home() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="about" className="border-gold-900/30">
-                  <AccordionTrigger className="text-[#D4AF37] font-cormorant text-xl tracking-wider py-6 hover:text-gold-300 transition-colors">
+                  <AccordionTrigger className="text-[#E6D9B4] font-cormorant text-xl tracking-wider py-6 hover:text-gold-300 transition-colors">
                     About
                   </AccordionTrigger>
                   <AccordionContent className="text-[#E7D7B7] font-cormorant text-lg leading-relaxed">
@@ -165,7 +165,7 @@ export default function Home() {
                     className="block border border-gold-900/30 hover:border-gold-600 bg-black p-8 text-center transition-all duration-700 relative overflow-hidden group"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gold-900/0 via-gold-900/5 to-gold-900/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <span className="relative z-10 text-[#D4AF37] group-hover:text-gold-400 font-cormorant text-xl tracking-wider transition-colors duration-500">
+                    <span className="relative z-10 text-[#E6D9B4] group-hover:text-gold-400 font-cormorant text-xl tracking-wider transition-colors duration-500">
                       {domain}
                     </span>
                   </a>
@@ -173,7 +173,7 @@ export default function Home() {
               ))}
             </div>
 
-            <footer className="mt-32 pt-8 border-t border-gold-900/30 text-[#D4AF37] text-center font-cormorant text-sm tracking-wider">
+            <footer className="mt-32 pt-8 border-t border-gold-900/30 text-[#E6D9B4] text-center font-cormorant text-sm tracking-wider">
               <p>© {new Date().getFullYear()} Aurum Domains. All rights reserved.</p>
               <p className="mt-2">By invitation only.</p>
             </footer>
