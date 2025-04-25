@@ -89,7 +89,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
             <header className="mb-32 text-center">
               <motion.img
-                src="/aurum-logo.png"
+                src="/logo.png"
                 alt="Aurum Domains Logo"
                 className="mx-auto mb-8 w-24 md:w-32"
                 initial={{ opacity: 0, y: -20 }}
