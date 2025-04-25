@@ -67,22 +67,23 @@ export default function Home() {
     "Fatu.xyz",
   ];
 
-    return (
-  <main className={`min-h-screen bg-black text-white ${playfair.variable} ${cormorant.variable} font-serif`}>
-    <AnimatePresence>
-      {showIntro && (
-        <motion.div
-          className="fixed inset-0 flex items-center justify-center bg-black z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <h1 className="text-4xl md:text-6xl text-[#D9C379] font-serif">
-            Welcome to Aurum Domains
-          </h1>
-        </motion.div>
-      )}
-    </AnimatePresence>
+  return (
+    <main className={`min-h-screen bg-black text-white ${playfair.variable} ${cormorant.variable} font-serif`}>
+      <AnimatePresence>
+        {showIntro && (
+          <motion.div
+            className="fixed inset-0 flex items-center justify-center bg-black z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <h1 className="text-4xl md:text-6xl text-[#D9C379] font-serif">
+              Welcome to Aurum Domains
+            </h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    
 
     {!showIntro && (
       <div className="container mx-auto px-4 py-16 md:py-24 max-w-screen-lg">
