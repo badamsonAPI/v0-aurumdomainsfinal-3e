@@ -115,7 +115,7 @@ export default function Home() {
             </header>
 
             <motion.div
-              className="text-center mb-20"
+              className="text-center mb-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
