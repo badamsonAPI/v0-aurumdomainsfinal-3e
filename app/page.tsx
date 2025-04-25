@@ -67,7 +67,7 @@ export default function Home() {
     "Fatu.xyz",
   ];
 
-return (
+  return (
   <main className={`min-h-screen bg-black text-white ${playfair.variable} ${cormorant.variable} font-serif`}>
     <AnimatePresence>
       {showIntro && (
