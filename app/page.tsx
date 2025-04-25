@@ -175,7 +175,7 @@ export default function Home() {
             </div>
 
             <motion.div
-              className="h-px w-full bg-gradient-to-r from-transparent via-gold-900/50 to-transparent mb-20"
+              className="h-px w-full bg-gradient-to-r from-transparent via-gold-900/50 to-transparent mb-0.2"
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 1.2, delay: 1.2 }}
