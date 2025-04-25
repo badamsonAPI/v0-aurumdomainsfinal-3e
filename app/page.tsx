@@ -115,7 +115,7 @@ export default function Home() {
             </header>
 
             <motion.div
-              className="text-center mb-10"
+              className="text-center mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -132,7 +132,7 @@ export default function Home() {
               transition={{ duration: 1.2, delay: 1 }}
             ></motion.div>
 
-            <div className="mb-10">
+            <div className="mb-8">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="how-it-works" className="border-gold-900/30">
                   <AccordionTrigger className="text-[#D9C379] font-cormorant text-xl tracking-wider py-6 hover:text-gold-300 transition-colors">
