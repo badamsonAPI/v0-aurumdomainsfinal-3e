@@ -179,6 +179,11 @@ export default function Home() {
               transition={{ duration: 1.2, delay: 1.2 }}
             ></motion.div>
 
+            <Button className="bg-transparent hover:bg-gold-900/20 text-[#D9C379] border border-gold-800 hover:border-gold-400 px-10 py-6 font-cormorant tracking-widest text-lg transition-all duration-500">
+                VIEW COLLECTION
+              </Button>
+            </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
               {domains.map((domain, index) => (
                 <motion.div
