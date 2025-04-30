@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { motion, AnimatePresence } from "framer-motion"
 import { Playfair_Display, Cormorant } from "next/font/google"
+import Image from "next/image"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -74,21 +75,29 @@ export default function Home() {
       <AnimatePresence>
         {showWelcome && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <motion.h1
-              className="text-[#D9C379] text-4xl md:text-5xl lg:text-6xl font-playfair tracking-wide text-center"
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center"
             >
-              Welcome to Aurum Domains
-            </motion.h1>
+              <Image
+                src="/logo.png"
+                alt="Aurum Domains Logo"
+                width={220}
+                height={220}
+                className="w-[180px] h-auto sm:w-[220px] mx-auto mb-4"
+                priority
+              />
+              <h2 className="text-[#D9C379] text-2xl md:text-3xl font-playfair tracking-wide">Welcome</h2>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -101,14 +110,21 @@ export default function Home() {
           transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.5 }}
         >
           <header className="mb-32 text-center">
-            <motion.h1
-              className="text-gold-400 text-4xl md:text-5xl lg:text-6xl font-playfair mb-6 tracking-wide"
+            <motion.div
+              className="inline-block mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: showWelcome ? 0 : 1, y: showWelcome ? 20 : 0 }}
               transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.7 }}
             >
-              AURUM DOMAINS
-            </motion.h1>
+              <Image
+                src="/logo.png"
+                alt="Aurum Domains Logo"
+                width={180}
+                height={180}
+                className="w-[120px] h-auto sm:w-[150px] md:w-[180px] mx-auto"
+                priority
+              />
+            </motion.div>
             <motion.p
               className="text-gold-200 text-lg md:text-xl mb-12 font-cormorant tracking-wider"
               initial={{ opacity: 0, y: 20 }}
