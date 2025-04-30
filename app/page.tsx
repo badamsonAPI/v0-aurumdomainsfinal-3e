@@ -107,7 +107,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: showWelcome ? 0 : 1 }}
-          transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.5 }}
+          transition={{ duration: 0.8, delay: showWelcome To Aurum Domains ? 0 : 0.5 }}
         >
           <header className="mb-32 text-center">
             <motion.div
