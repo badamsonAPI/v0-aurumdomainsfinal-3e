@@ -104,14 +104,16 @@ export default function Home() {
                   <div className="space-y-4 py-2 pl-2">
                     <p>Aurum Domains operates on an exclusive silent auction model:</p>
                     <ol className="list-decimal pl-5 space-y-3">
-                      <li>Browse our curated collection of premium domains - these exclusive domains are not available on any marketplace</li>
-                      <li>Click on any of the domain name cards to be directed to that domain</li>
-                      <li>Enter the access code you received in your invitation email from your dedicated representative</li>
-                      <li>Submit confidential bids during the auction period - all bids are confidential and will not be disclosed to other parties</li>
-                      <li>Winning bidders are notified privately</li>
-                      <li>Payment will be required through Escrow.com - the domain will be manually pushed to the GoDaddy account of your choice</li>
+                      <li>Explore our exclusive collection of premium domains — these are not listed on any public marketplace</li>
+                      <li>Select the domain you'd like to acquire</li>
+                      <li>Enter your access code provided by your Aurum Domains representative</li>
+                      <li>Place your bid discreetly during the 7-day auction window</li>
+                      <li>All bids are confidential — no information is shared with other parties</li>
+                      <li>The highest bidder is notified privately at the end of the auction</li>
+                      <li>Payment is completed securely via Escrow.com — funds are only released once the transfer is complete</li>
+                      <li>Your domain is manually pushed to your GoDaddy account by our team</li>
                     </ol>
-                    <p>All transactions are conducted with the utmost discretion and security.</p>
+                    <p>Every step is conducted with full discretion, premium security, and white-glove support.</p>
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -122,16 +124,14 @@ export default function Home() {
                 <AccordionContent className="text-gold-200 font-cormorant text-lg leading-relaxed">
                   <div className="space-y-4 py-2 pl-2">
                     <p>
-                      Aurum Domains specializes in the acquisition and auction of ultra-premium domain names for elite
-                      businesses in Dubai and the global Web3/crypto ecosystem.
+                      Aurum Domains specializes in premium domain assets within the Web3 and crypto ecosystem.
+                      We work exclusively with innovators, visionaries, and future-focused companies — with a particular focus on the UAE’s elite business community.
                     </p>
                     <p>
-                      Our carefully curated portfolio represents the pinnacle of digital real estate, offering
-                      unparalleled branding opportunities for discerning clients.
+                      Our portfolio is meticulously curated to represent the pinnacle of digital real estate, offering rare branding opportunities that are not available on any public marketplace.
                     </p>
                     <p>
-                      Founded by domain industry veterans with decades of combined experience, we maintain the highest
-                      standards of professionalism, confidentiality, and service excellence.
+                      Founded by experienced domain industry veterans, we operate with the highest standards of professionalism, confidentiality, and discreet service — delivering white-glove support throughout every acquisition.
                     </p>
                   </div>
                 </AccordionContent>
