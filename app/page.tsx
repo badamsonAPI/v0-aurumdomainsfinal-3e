@@ -1,7 +1,7 @@
 "use client"
+import { useState, useEffect } from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Playfair_Display, Cormorant } from "next/font/google"
 
 const playfair = Playfair_Display({
@@ -15,6 +15,18 @@ const cormorant = Cormorant({
 })
 
 export default function Home() {
+  const [showWelcome, setShowWelcome] = useState(true)
+
+  useEffect(() => {
+    // Set timeout to hide welcome message after 3 seconds
+    const timer = setTimeout(() => {
+      setShowWelcome(false)
+    }, 3000)
+
+    // Clean up timer on unmount
+    return () => clearTimeout(timer)
+  }, [])
+
   const domains = [
     "UAEGDP.com",
     "Nohmex.com",
@@ -58,30 +70,58 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen bg-black text-gold-100 ${playfair.variable} ${cormorant.variable} font-serif`}>
+      {/* Welcome Screen */}
+      <AnimatePresence>
+        {showWelcome && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <motion.h1
+              className="text-[#D9C379] text-4xl md:text-5xl lg:text-6xl font-playfair tracking-wide text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Welcome to Aurum Domains
+            </motion.h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main Content */}
       <div className="container mx-auto px-4 py-16 md:py-24 max-w-screen-lg">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: showWelcome ? 0 : 1 }}
+          transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.5 }}
+        >
           <header className="mb-32 text-center">
             <motion.h1
               className="text-gold-400 text-4xl md:text-5xl lg:text-6xl font-playfair mb-6 tracking-wide"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              animate={{ opacity: showWelcome ? 0 : 1, y: showWelcome ? 20 : 0 }}
+              transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.7 }}
             >
               AURUM DOMAINS
             </motion.h1>
             <motion.p
               className="text-gold-200 text-lg md:text-xl mb-12 font-cormorant tracking-wider"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              animate={{ opacity: showWelcome ? 0 : 1, y: showWelcome ? 20 : 0 }}
+              transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.9 }}
             >
               The Gold Standard of Domains
             </motion.p>
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              animate={{ opacity: showWelcome ? 0 : 1, scaleX: showWelcome ? 0 : 1 }}
+              transition={{ duration: 1, delay: showWelcome ? 0 : 1.1 }}
             >
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold-700 to-transparent"></div>
             </motion.div>
@@ -90,8 +130,8 @@ export default function Home() {
           <motion.div
             className="h-px w-full bg-gradient-to-r from-transparent via-gold-900/50 to-transparent mb-20"
             initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 1 }}
+            animate={{ opacity: showWelcome ? 0 : 1, scaleX: showWelcome ? 0 : 1 }}
+            transition={{ duration: 1.2, delay: showWelcome ? 0 : 1.3 }}
           ></motion.div>
 
           <div className="mb-20">
@@ -104,13 +144,19 @@ export default function Home() {
                   <div className="space-y-4 py-2 pl-2">
                     <p>Aurum Domains operates on an exclusive silent auction model:</p>
                     <ol className="list-decimal pl-5 space-y-3">
-                      <li>Explore our exclusive collection of premium domains — these are not listed on any public marketplace</li>
+                      <li>
+                        Explore our exclusive collection of premium domains — these are not listed on any public
+                        marketplace
+                      </li>
                       <li>Select the domain you'd like to acquire</li>
                       <li>Enter your access code provided by your Aurum Domains representative</li>
                       <li>Place your bid discreetly during the 7-day auction window</li>
                       <li>All bids are confidential — no information is shared with other parties</li>
                       <li>The highest bidder is notified privately at the end of the auction</li>
-                      <li>Payment is completed securely via Escrow.com — funds are only released once the transfer is complete</li>
+                      <li>
+                        Payment is completed securely via Escrow.com — funds are only released once the transfer is
+                        complete
+                      </li>
                       <li>Your domain is manually pushed to your GoDaddy account by our team</li>
                     </ol>
                     <p>Every step is conducted with full discretion, premium security, and white-glove support.</p>
@@ -124,14 +170,18 @@ export default function Home() {
                 <AccordionContent className="text-gold-200 font-cormorant text-lg leading-relaxed">
                   <div className="space-y-4 py-2 pl-2">
                     <p>
-                      Aurum Domains specializes in premium domain assets within the Web3 and crypto ecosystem.
-                      We work exclusively with innovators, visionaries, and future-focused companies — with a particular focus on the UAE’s elite business community.
+                      Aurum Domains specializes in premium domain assets within the Web3 and crypto ecosystem. We work
+                      exclusively with innovators, visionaries, and future-focused companies — with a particular focus
+                      on the UAE's elite business community.
                     </p>
                     <p>
-                      Our portfolio is meticulously curated to represent the pinnacle of digital real estate, offering rare branding opportunities that are not available on any public marketplace.
+                      Our portfolio is meticulously curated to represent the pinnacle of digital real estate, offering
+                      rare branding opportunities that are not available on any public marketplace.
                     </p>
                     <p>
-                      Founded by experienced domain industry veterans, we operate with the highest standards of professionalism, confidentiality, and discreet service — delivering white-glove support throughout every acquisition.
+                      Founded by experienced domain industry veterans, we operate with the highest standards of
+                      professionalism, confidentiality, and discreet service — delivering white-glove support throughout
+                      every acquisition.
                     </p>
                   </div>
                 </AccordionContent>
@@ -142,8 +192,8 @@ export default function Home() {
           <motion.div
             className="h-px w-full bg-gradient-to-r from-transparent via-gold-900/50 to-transparent mb-20"
             initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 1.2 }}
+            animate={{ opacity: showWelcome ? 0 : 1, scaleX: showWelcome ? 0 : 1 }}
+            transition={{ duration: 1.2, delay: showWelcome ? 0 : 1.5 }}
           ></motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
@@ -151,8 +201,8 @@ export default function Home() {
               <motion.div
                 key={domain}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                animate={{ opacity: showWelcome ? 0 : 1, y: showWelcome ? 20 : 0 }}
+                transition={{ duration: 0.5, delay: showWelcome ? 0 : 1.7 + index * 0.05 }}
                 className="group"
               >
                 <a
