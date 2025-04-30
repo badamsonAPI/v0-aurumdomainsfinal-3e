@@ -63,6 +63,12 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
 
+            >
+            <Button className="bg-transparent hover:bg-gold-900/20 text-gold-400 border border-gold-800 hover:border-gold-400 px-10 py-6 font-cormorant tracking-widest text-lg transition-all duration-500">
+              VIEW COLLECTION
+            </Button>
+          </motion.div>
+
           <motion.div
             className="h-px w-full bg-gradient-to-r from-transparent via-gold-900/50 to-transparent mb-20"
             initial={{ opacity: 0, scaleX: 0 }}
