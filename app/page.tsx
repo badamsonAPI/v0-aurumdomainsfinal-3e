@@ -16,7 +16,7 @@ const cormorant = Cormorant({
 
 export default function Home() {
   const domains = [
-"UAEGDP.com",
+    "UAEGDP.com",
     "Nohmex.com",
     "TempoVault.com",
     "WalletOracle.com",
@@ -156,7 +156,7 @@ export default function Home() {
                 className="group"
               >
                 <a
-                  href="#"
+                  href={`https://${domain}`}
                   className="block border border-gold-900/30 hover:border-gold-600 bg-black p-8 text-center transition-all duration-700 relative overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-gold-900/0 via-gold-900/5 to-gold-900/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
