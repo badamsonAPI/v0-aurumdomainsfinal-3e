@@ -96,7 +96,7 @@ export default function Home() {
                 className="w-[180px] h-auto sm:w-[220px] mx-auto mb-4"
                 priority
               />
-              <h2 className="text-[#D9C379] text-2xl md:text-3xl font-playfair tracking-wide">Welcome</h2>
+              <h2 className="text-[#D9C379] text-2xl md:text-3xl font-playfair tracking-wide">Welcome To Aurum Domains</h2>
             </motion.div>
           </motion.div>
         )}
@@ -107,7 +107,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: showWelcome ? 0 : 1 }}
-          transition={{ duration: 0.8, delay: showWelcome To Aurum Domains ? 0 : 0.5 }}
+          transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.5 }}
         >
           <header className="mb-32 text-center">
             <motion.div
