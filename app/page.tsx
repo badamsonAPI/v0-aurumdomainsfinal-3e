@@ -104,12 +104,12 @@ export default function Home() {
                   <div className="space-y-4 py-2 pl-2">
                     <p>Aurum Domains operates on an exclusive silent auction model:</p>
                     <ol className="list-decimal pl-5 space-y-3">
-                      <li>Browse our curated collection of premium domains</li>
-                      <li>Request access to specific domain auctions</li>
-                      <li>Receive private auction details and bidding instructions</li>
-                      <li>Submit confidential bids during the auction period</li>
+                      <li>Browse our curated collection of premium domains - these exclusive domains are not available on any marketplace</li>
+                      <li>Click on any of the domain name cards to be directed to that domain</li>
+                      <li>Enter the access code you received in your invitation email from your dedicated representative</li>
+                      <li>Submit confidential bids during the auction period - all bids are confidential and will not be disclosed to other parties</li>
                       <li>Winning bidders are notified privately</li>
-                      <li>Our team handles the secure transfer process</li>
+                      <li>Payment will be required through Escrow.com - the domain will be manually pushed to the GoDaddy account of your choice</li>
                     </ol>
                     <p>All transactions are conducted with the utmost discretion and security.</p>
                   </div>
