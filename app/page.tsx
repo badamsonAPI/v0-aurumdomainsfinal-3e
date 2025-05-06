@@ -170,8 +170,8 @@ export default function Home() {
                       <li>All bids are confidential — no information is shared with other parties</li>
                       <li>The highest bidder is notified privately at the end of the auction</li>
                       <li>
-                        Payment is completed securely via Escrow.com (Escrow fee will be paid by the winnind bidder) — funds are only released once the transfer is
-                        complete (Escrow fee to be covered by buyer)
+                        Payment is completed securely via Escrow.com — funds are only released once the transfer is
+                        complete
                       </li>
                       <li>Your domain is manually pushed to your GoDaddy account by our team</li>
                     </ol>
