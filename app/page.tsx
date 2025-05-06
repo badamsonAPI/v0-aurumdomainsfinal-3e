@@ -171,7 +171,7 @@ export default function Home() {
                       <li>The highest bidder is notified privately at the end of the auction</li>
                       <li>
                         Payment is completed securely via Escrow.com — funds are only released once the transfer is
-                        complete
+                        complete (Escrow fee to be covered by buyer)
                       </li>
                       <li>Your domain is manually pushed to your GoDaddy account by our team</li>
                     </ol>
