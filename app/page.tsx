@@ -109,7 +109,7 @@ export default function Home() {
           animate={{ opacity: showWelcome ? 0 : 1 }}
           transition={{ duration: 0.8, delay: showWelcome ? 0 : 0.5 }}
         >
-          <header className="mb-8 text-center">
+          <header className="mb-4 text-center">
             <motion.div
               className="inline-block mb-6"
               initial={{ opacity: 0, y: 20 }}
