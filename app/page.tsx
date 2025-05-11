@@ -166,7 +166,7 @@ export default function Home() {
                       </li>
                       <li>Select the domain you'd like to acquire</li>
                       <li>Enter your access code provided by your Aurum Domains representative</li>
-                      <li>Place your bid discreetly during the 7-day auction window</li>
+                      <li>Place your bid discreetly during the 72 hour auction window</li>
                       <li>All bids are confidential — no information is shared with other parties</li>
                       <li>The highest bidder is notified privately at the end of the auction</li>
                       <li>
